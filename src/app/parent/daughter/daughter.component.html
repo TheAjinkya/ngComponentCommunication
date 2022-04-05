@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header text-white bg-warning">
+        Daugher Component
+      </div>
+    <div class="card-body">
+        <h5 class="card-title">Message from Parent: </h5>
+        {{messageFromParent}}
+        <hr/>
+        <button class="btn btn-primary" (click)="sendToParent()">Send to Parent</button>
+    <hr>
+    <h5 class="card-title">Message from Brother: </h5>
+    {{messageFromBrother}}
+    <hr/>
+    <input type="text" name='message' value='Hello Brother' #messageToBrother/>
+    <button class="btn btn-primary" (click)="sendToBrother(messageToBrother.value)">Send to Brother</button>
+    </div>
+  </div>

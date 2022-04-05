@@ -1,0 +1,30 @@
+<div class="card text-center">
+    <div class="card-header text-white bg-primary">
+      Parent Component
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Component Interaction App</h5>
+      <p class="card-text">You can send the message to respective components</p>
+      <div class="row">
+        <div class="col-sm-6">
+            Son's Message: {{messageFromSon}}<hr/>
+            <input name='message' value='New Message'#messageToSon/>
+            <button (click)="sendHim(messageToSon.value)" class="btn btn-primary"> Send Him</button>
+         <app-son (customEvent)="getMessageFromSon($event)" [messageFromParent]='messageForHim'></app-son>
+        
+        </div>
+        <div class="col-sm-6">
+            Daugher's Message: {{messageFromDaughter}}<hr/>
+            <input name='message' value='New Message'#messageToDaughter/>
+            <button (click)="sendHer(messageToDaughter.value)" class="btn btn-primary"> Send Her</button>
+          <app-daughter (customEvent)="getMessageFromDaughter($event)" [messageFromParent]='messageForHer'></app-daughter>
+          
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+
+  

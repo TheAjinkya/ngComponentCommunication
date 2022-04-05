@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header text-white bg-danger">
+        Son Component
+      </div>
+    <div class="card-body">
+      <h5 class="card-title">Message from Parent: </h5>
+      {{messageFromParent}}
+      <hr/>
+      <button class="btn btn-primary" (click)="sendToParent()">Send to Parent</button>
+      <hr/>
+      <h5 class="card-title">Message from Sister: </h5>
+      {{messageFromSister}}
+      <hr/>
+      <input type="text" name="message" value="hello sister" #messageToSister>
+      <button class="btn btn-primary" (click)="sendToSister(messageToSister.value)">Send to Sister</button>
+    </div>
+  </div>
