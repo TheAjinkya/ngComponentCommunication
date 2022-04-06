@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Avatar</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td><img height="100px" src="{{user.avatar_url}}"/></td>
+        <td>{{user.login}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- users -->
