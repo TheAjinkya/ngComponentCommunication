@@ -2,20 +2,24 @@
     <div class="card-header text-white bg-primary">
         Parent Component
     </div>
-    <div class="card-body">
+    <div class="card-body text-white bg-danger">
         <h5 class="card-title">Component Interaction App</h5>
         <p class="card-text">Through @ViewChild we can access the child comp properties</p>
+        
+        <div *ngFor="let product of products">{{product}}</div>
+        <hr/>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
+                <div class="col-md-4"></div>
                 <div class="card">
-                    <div class="card-header text-white bg-danger">
+                    <div class="card-header bg-success">
                         Child Component
                     </div>
                     <div class="card-body">
                         <app-child-products></app-child-products>
                     </div>
                 </div>
-                <!-- <input name='message' value='New Message'#messageToSon/> -->
+                <div class="col-md-4"></div>
             </div>
         </div>
     </div>

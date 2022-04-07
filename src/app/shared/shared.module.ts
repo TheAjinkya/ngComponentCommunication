@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { RouterModule } from '@angular/router';
 import { ChildProductsComponent } from './child-products/child-products.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -17,7 +17,7 @@ import { ChildProductsComponent } from './child-products/child-products.componen
   ],
   imports: [
     CommonModule,
-    RouterModule
+    AppRoutingModule
   ],
   exports:[ ProductsComponent,
     UsersComponent,

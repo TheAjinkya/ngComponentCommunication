@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child-products',
@@ -7,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildProductsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() { 
+  }
+  childProductsList:any[]=[]
   ngOnInit(): void {
+    this.childProductsList = ['iPhone 11','iPhone 12','iPhone 13','iPhone 14']
   }
 
-  childProductsList = ['iPhone 11','iPhone 12','iPhone 13','iPhone 14']
+  getProducts() {
+    return this.childProductsList
+  }
+
+  addNewProduct(productName:String) {
+    this.childProductsList.push(productName)
+  }
+
+  
 
 }

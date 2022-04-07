@@ -1,1 +1,16 @@
-<p>child-products works!</p>
+
+<input type="text" name="product" value="iPhone 14 Pro" placeholder="Enter the product Name" #product>
+<button type="button" class="btn btn-primary" (click)="addNewProduct(product.value)" >Add Product</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Product List</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of childProductsList">
+            <td>{{product}}</td>
+        </tr>
+    </tbody>
+</table>

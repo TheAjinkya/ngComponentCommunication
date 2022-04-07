@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ParentModule } from './parent/parent.module';
 import { SharedModule } from './shared/shared.module';
+import { DataService } from './_services/data.service';
+// import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,11 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     ParentModule,
-    SharedModule
+    SharedModule,
+    // RouterModule
     
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
